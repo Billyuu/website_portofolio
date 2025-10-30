@@ -144,4 +144,37 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => loadingScreen.style.display='none', 500);
     mainPage.classList.add("visible");
   }, 4000);
+
 });
+
+// === MODE TERANG / GELAP ===
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+
+  const icon = themeToggle.querySelector('i');
+  if (body.classList.contains('dark-mode')) {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  } else {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  }
+});
+
+const homeImg = document.querySelector(".home img");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      homeImg.classList.add("animate");
+    } else {
+      homeImg.classList.remove("animate"); // reset biar bisa animasi lagi
+    }
+  });
+});
+
+observer.observe(homeImg);
+

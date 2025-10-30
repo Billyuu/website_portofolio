@@ -10,6 +10,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300..800&family=Playfair+Display:wght@400..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -32,82 +34,79 @@
         </div>
     </div>
     <header class="header-list">
-        <div class="div-list ">
+        <div class="div-list">
             <ul class="ul-list">
-                <li class="active">
-                    <i class="fa-regular fa-house"></i>
-                    <a href="#home">Home</a>
+                <li class="logo">
+                    &lt;<span class="hello">Hello</span><span class="word">Word</span>&gt;
                 </li>
-                <li>
-                    <i class="fa-regular fa-address-card"></i>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-folder-open"></i>
-                    <a href="#project">Projects</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-code"></i>
-                    <a href="#services">services</a>
-                </li>
-                <li>
-                    <i class="fa-regular fa-envelope"></i>
-                    <a href="#contact">Contact</a>
+
+                <li class="active"><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="theme-toggle" id="themeToggle">
+                    <i class="fa-solid fa-sun"></i>
                 </li>
             </ul>
         </div>
     </header>
+
+
     <!-- home -->
     <section class="home" id="home">
-        <p class="home-p">
-            <span class="home-s">. </span>Willing To Work Hard
-        </p>
         <div class="home-container">
             <div class="home-section">
                 <div class="info-home">
                     <h1>Hi, I'm Billy</h1>
                     <h3>Frontend Developer</h3>
-                    <div class="info-p">
-                        <p>I am an amateur programmer with 4 years of experience in developing mobile and web applications. </p>
-                        <p>I truly enjoy the process of turning ideas into reality through clean design, efficient code, and creative problem-solving.</p>
-                        <p>Headache has become a friend of mine.</p>
-                    </div>
-                    <div class="info-p2">
-                        <p><i class="fa-solid fa-location-dot"></i> Pasuruan, East Java</p>
-                        <p><i class="fa-solid fa-briefcase"></i> Available Now</p>
-                    </div>
-                    <div class="btnn">
-                        <button class="btn-home1"><i class="fa-solid fa-arrow-right"></i> Hire Me</button>
-                        <a href="https://drive.google.com/uc?export=download&id=1CdRavltzL7Gp2T9mbvFli5aNEtkImV3H" class="btn-home2">
-                            <i class="fa-solid fa-download"></i> Download CV
-                        </a>
 
+                    <div class="info-p">
+                        <p>Hi! I’m Billy — a Frontend Developer who loves building beautiful and functional applications.</p>
+                        <p>I enjoy learning new technologies, solving problems creatively, and transforming simple ideas into something people can actually use.</p>
+                        <p>Code, coffee, and curiosity keep me going every day.</p>
                     </div>
-                    <div class="hhr">
-                        <hr>
-                    </div>
+
                     <div class="follow">
-                        <p class="followw">Follow me:</p>
                         <ul>
                             <li>
                                 <a href="https://github.com/Billyuu" target="_blank">
                                     <i class="fa-brands fa-github"></i>
                                 </a>
                             </li>
+                            <li>
+                                <a href="https://discord.com/users/1239146773042171987" target="_blank">
+                                    <i class="fa-brands fa-discord"></i>
+                                </a>
+                            </li>
 
-                            <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/davi-sabilissalim-undefined-790a752b6" target="_blank">
-                                <i class="fa-brands fa-linkedin"></i></a></li>
-                            <li> <a href="https://www.instagram.com/dv.sblslm_?igsh=MWMyM3cybjN6aXhjaw==" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i></a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/davi-sabilissalim-undefined-790a752b6" target="_blank">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/dv.sblslm_?igsh=MWMyM3cybjN6aXhjaw==" target="_blank">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
                         </ul>
+                    </div>
+
+                    <div class="btnn">
+                        <a
+                            href="https://drive.google.com/uc?export=download&id=1CdRavltzL7Gp2T9mbvFli5aNEtkImV3H"
+                            class="btn-home1">
+                            <i class="fa-solid fa-download"></i> Download CV
+                        </a>
                     </div>
                 </div>
             </div>
-            <img src="images/k.png" alt="">
+            <img src="images/k.png" alt="Profile Image">
         </div>
     </section>
-    <!-- fine home  -->
+
+    <!-- ABOUT  -->
     <section class="about" id="about">
         <p id="about">ABOUT ME</p>
         <div class="title">
@@ -127,18 +126,18 @@
                     </p>
                     <p>
                         When I'm not coding, I enjoy learning new technologies, improving my projects, <br> and exploring better ways to make the web faster and more engaging.
-                        <br>I believe in continuous learning, attention to detail, and the power of clean, meaningful design
+                        <br>I believe in continuous learning, attention to detail, and meaningful design
                     </p>
                 </div>
                 <h2>What Drives Me</h2>
                 <div class="card">
                     <div class="c1">
                         <h3><i class="fa-solid fa-code"></i> Languoges</h3>
-                        <p>HTNL,CSS,JavaScript,Java,C,React</p>
+                        <p>HTML,CSS,JavaScript,Flutter</p>
                     </div>
                     <div class="c1">
                         <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
-                        <p>USTHB in Computer Science</p>
+                        <p>Yudharta University in Informatics Engineering</p>
                     </div>
                     <div class="c1">
                         <h3><i class="fa-solid fa-folder-open"></i> Projects</h3>
@@ -149,6 +148,8 @@
             <img src="images/img.jpg" alt="">
         </div>
     </section>
+
+    <!-- PROJECT  -->
     <section class="project" id="project">
         <p>PROJECTS</p>
         <h1>Featured Work</h1>
