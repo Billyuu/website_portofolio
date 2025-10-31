@@ -12,18 +12,20 @@ header {
   z-index: 1000;
 }
 
+/* ======== NAVBAR LIST ======== */
 .ul-list {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 2rem;
   list-style: none;
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
   padding: 15px 65px;
-  border-bottom: 1px solid transparent;
-  transition: background-color 0.3s ease, color 0.3s ease, backdrop-filter 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
+/* ======== LOGO ======== */
 .ul-list .logo {
   font-family: "Poppins", sans-serif;
   font-size: 30px;
@@ -31,7 +33,6 @@ header {
   margin-right: auto;
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 
 .ul-list .logo .hello {
@@ -47,11 +48,11 @@ body.dark-mode .ul-list .logo .word {
   color: white;
 }
 
+/* ======== NAVBAR LINK ======== */
 .ul-list li {
   position: relative;
   display: flex;
   align-items: center;
-  transition: 0.3s;
 }
 
 .ul-list li a {
@@ -64,6 +65,12 @@ body.dark-mode .ul-list .logo .word {
   transition: color 0.3s ease;
 }
 
+/* Hover effect */
+.ul-list li:not(.theme-toggle):hover a {
+  color: turquoise;
+}
+
+/* Garis bawah hover */
 .ul-list li:not(.logo):not(.theme-toggle)::after {
   content: "";
   position: absolute;
@@ -77,11 +84,55 @@ body.dark-mode .ul-list .logo .word {
 .ul-list li:not(.theme-toggle):hover::after {
   width: 100%;
 }
-.ul-list li:not(.theme-toggle):hover a {
+
+/* ======== ACTIVE LINK (GARIS PERMANEN) ======== */
+.ul-list li.active a {
   color: turquoise;
 }
 
-/* ICON TOGGLE */
+/* Garis bawah aktif permanen */
+.ul-list li.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: turquoise;
+}
+
+/* Khusus untuk Home: tidak aktif permanen */
+.ul-list li.active a[href="#home"] {
+  color: black;
+}
+.ul-list li.active a[href="#home"]::after {
+  width: 0 !important;
+  content: none;
+}
+
+/* ======== DARK MODE ======== */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .ul-list {
+  background-color: rgba(30, 30, 30, 0.8);
+}
+
+body.dark-mode .ul-list li a {
+  color: white;
+}
+
+body.dark-mode .ul-list li.active a {
+  color: turquoise;
+}
+
+body.dark-mode .ul-list li.active a[href="#home"] {
+  color: white;
+}
+
+/* ======== THEME TOGGLE ICON ======== */
 .theme-toggle {
   cursor: pointer;
   font-size: 1.4rem;
@@ -91,27 +142,33 @@ body.dark-mode .ul-list .logo .word {
 .theme-toggle:hover {
   transform: rotate(50deg);
 }
-
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #ffffff;
-}
-
-body.dark-mode .ul-list {
-  background-color: rgba(30, 30, 30, 0.8);
-}
-
-body.dark-mode .ul-list li a {
-  color: #ffffff;
-}
-
-body.dark-mode .ul-list li a:hover {
-  color: turquoise;
-}
-
 body.dark-mode .theme-toggle {
   color: white;
 }
+
+/* Garis bawah untuk link aktif */
+.ul-list li.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: turquoise;
+}
+
+/* Home tidak punya garis bawah */
+.ul-list li.active a[href="#home"] {
+  color: black;
+}
+.ul-list li.active a[href="#home"]::after,
+.ul-list li.active[href="#home"]::after {
+  content: none;
+  width: 0 !important;
+}
+
+
+
 
 /* ========== HOME SECTION ========== */
 .home {

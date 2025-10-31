@@ -20,34 +20,49 @@ navLinks.forEach(link => {
     link.parentElement.classList.add('active');
   });
 });
-
 window.addEventListener('scroll', () => {
-  let scrollPos = window.scrollY + 100;
+  const scrollPos = window.scrollY + 150; // offset agar deteksi section lebih halus
 
+  // =====================
+  // NAVBAR ACTIVE SECTION
+  // =====================
   sections.forEach(section => {
-    if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+    const navLink = document.querySelector(`.ul-list li a[href="#${sectionId}"]`);
+
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
       removeActive();
-      const activeLink = document.querySelector(`.ul-list li a[href="#${section.id}"]`);
-      if (activeLink) activeLink.parentElement.classList.add('active');
+      if (sectionId !== 'home' && navLink) {
+        navLink.parentElement.classList.add('active');
+      }
     }
   });
 
-  if(window.scrollY > 500){
+  // =====================
+  // BACK TO TOP BUTTON
+  // =====================
+  if (window.scrollY > 500) {
     backToTop.style.display = "flex";
   } else {
     backToTop.style.display = "none";
   }
 
+  // =====================
+  // REVEAL ANIMATION
+  // =====================
   revealElements.forEach(el => {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
     const revealPoint = 150;
 
-    if(elementTop < windowHeight - revealPoint){
+    if (elementTop < windowHeight - revealPoint) {
       el.classList.add('active-reveal');
     }
   });
 });
+
 
 const revealElements = document.querySelectorAll('.home-container, .about-container, .projects-container, .services-container, .contact-content');
 revealElements.forEach(el => el.classList.add('reveal'));

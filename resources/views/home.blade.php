@@ -18,7 +18,7 @@
 
 <body>
     <!-- loading screen -->
-    <div id="loading-screen">
+    <!-- <div id="loading-screen">
         <div class="loading-content">
             <i class="fa-solid fa-laptop-code fa-5x main-icon hidden"></i>
 
@@ -32,7 +32,7 @@
 
             <h2 id="designer-text" class="hidden">Welcom To My Profile</h2>
         </div>
-    </div>
+    </div> -->
     <header class="header-list">
         <div class="div-list">
             <ul class="ul-list">
