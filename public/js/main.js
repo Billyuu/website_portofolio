@@ -165,19 +165,32 @@ document.addEventListener("DOMContentLoaded", () => {
 // === MODE TERANG / GELAP ===
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
+const themeIcon = themeToggle.querySelector('i');
+
+// Dark menjadi tema bawaan
+const savedTheme = localStorage.getItem('theme') || 'dark';
+
+body.classList.toggle('dark-mode', savedTheme === 'dark');
+updateThemeIcon();
 
 themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
 
-  const icon = themeToggle.querySelector('i');
-  if (body.classList.contains('dark-mode')) {
-    icon.classList.remove('fa-sun');
-    icon.classList.add('fa-moon');
-  } else {
-    icon.classList.remove('fa-moon');
-    icon.classList.add('fa-sun');
-  }
+  const currentTheme = body.classList.contains('dark-mode')
+    ? 'dark'
+    : 'light';
+
+  localStorage.setItem('theme', currentTheme);
+  updateThemeIcon();
 });
+
+function updateThemeIcon() {
+  const isDark = body.classList.contains('dark-mode');
+
+  themeIcon.classList.toggle('fa-moon', isDark);
+  themeIcon.classList.toggle('fa-sun', !isDark);
+}
+
 
 const homeImg = document.querySelector(".home img");
 
@@ -191,5 +204,35 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+// ========== MENU TOGGLE ==========
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.querySelector(".ul-list");
+
+menuToggle.addEventListener("click", () => {
+  const menuIsOpen = navbar.classList.toggle("active");
+
+  menuToggle.classList.toggle("open", menuIsOpen);
+});
+
+/* Tutup menu setelah navigasi dipilih */
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    menuToggle.classList.remove("open");
+  });
+});
+
+/* Tutup dengan tombol Escape */
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    navbar.classList.remove("active");
+    menuToggle.classList.remove("open");
+  }
+});
+
 observer.observe(homeImg);
+
+
 

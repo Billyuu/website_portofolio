@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="dark-mode">
     <!-- loading screen -->
     <!-- <div id="loading-screen">
         <div class="loading-content">
@@ -34,23 +34,33 @@
         </div>
     </div> -->
     <header class="header-list">
-        <div class="div-list">
-            <ul class="ul-list">
-                <li class="logo">
-                    &lt;<span class="hello">Hello</span><span class="word">Word</span>&gt;
-                </li>
+    <div class="div-list">
 
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#project">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="theme-toggle" id="themeToggle">
-                    <i class="fa-solid fa-sun"></i>
-                </li>
-            </ul>
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
+
+        <ul class="ul-list">
+            <li class="logo">
+                &lt;<span class="hello">Hello</span><span class="word">Word</span>&gt;
+            </li>
+
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <li class="theme-toggle" id="themeToggle">
+                <i class="fa-solid fa-moon"></i>
+            </li>
+        </ul>
+
+    </div>
+</header>
+
 
 
     <!-- home -->
@@ -108,7 +118,7 @@
 
     <!-- ABOUT  -->
     <section class="about" id="about">
-        <p id="about">ABOUT ME</p>
+        <p class="about-title">ABOUT ME</p>
         <div class="title">
             <h1>Building Meaningful</h1>
             <h1>Digital Experiences</h1>
@@ -116,38 +126,179 @@
         <div class="hrrr">
             <hr>
         </div>
+
         <div class="about-container">
             <div class="info-about">
                 <div class="about-info">
                     <p>
                         I'm a creative front-end developer passionate about building modern and responsive web experiences.
-                        <br>My journey began with a love for design and evolved into a deep curiosity for how the web works — combining <br> logic with creativity to bring ideas to life.
-
+                        <br>My journey began with a love for design and evolved into a deep curiosity for how the web works — combining logic with creativity to bring ideas to life.
                     </p>
                     <p>
-                        When I'm not coding, I enjoy learning new technologies, improving my projects, <br> and exploring better ways to make the web faster and more engaging.
-                        <br>I believe in continuous learning, attention to detail, and meaningful design
+                        When I'm not coding, I enjoy learning new technologies, improving my projects,
+                        <br>and exploring better ways to make the web faster and more engaging.
+                        <br>I believe in continuous learning, attention to detail, and meaningful design.
                     </p>
                 </div>
+
                 <h2>What Drives Me</h2>
                 <div class="card">
                     <div class="c1">
-                        <h3><i class="fa-solid fa-code"></i> Languoges</h3>
-                        <p>HTML,CSS,JavaScript,Flutter</p>
+                        <h3><i class="fa-solid fa-code"></i> Languages</h3>
+                        <p>HTML, CSS, JavaScript, Flutter</p>
                     </div>
                     <div class="c1">
                         <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
                         <p>Yudharta University in Informatics Engineering</p>
                     </div>
-                    <div class="c1">
-                        <h3><i class="fa-solid fa-folder-open"></i> Projects</h3>
-                        <p>Built more than 5 projects</p>
-                    </div>
+                    <a href="#project" style="text-decoration: none; color: inherit;">
+                        <div class="c1">
+                            <h3><i class="fa-solid fa-folder-open"></i> Projects</h3>
+                            <p>Built more than 5 projects</p>
+                        </div>
+                    </a>
+
                 </div>
             </div>
-            <img src="images/img.jpg" alt="">
+
+            <div class="about-img">
+                <img src="/images/billy.png" alt="Profile Image">
+            </div>
         </div>
+
+        <!-- ===== TOOLS SECTION ===== -->
+<div class="tools-section" id="tools">
+    <h2>Tools & Technologies I Use</h2>
+
+    <div class="tools-container">
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/vscode.png') }}"
+                     alt="Visual Studio Code Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">Visual Studio Code</p>
+                <p class="tool-desc">Code Editor</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/flutter.png') }}"
+                     alt="Flutter Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">Flutter</p>
+                <p class="tool-desc">UI Framework</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/dart.png') }}"
+                     alt="Dart Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">Dart</p>
+                <p class="tool-desc">Programming Language</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/html.png') }}"
+                     alt="HTML Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">HTML5</p>
+                <p class="tool-desc">Web Structure</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/css.png') }}"
+                     alt="CSS Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">CSS3</p>
+                <p class="tool-desc">Web Styling</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/javascript.png') }}"
+                     alt="JavaScript Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">JavaScript</p>
+                <p class="tool-desc">Web Programming</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/php.png') }}"
+                     alt="PHP Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">PHP</p>
+                <p class="tool-desc">Backend Language</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/laravel.png') }}"
+                     alt="Laravel Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">Laravel</p>
+                <p class="tool-desc">PHP Framework</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/firebase.png') }}"
+                     alt="Firebase Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">Firebase</p>
+                <p class="tool-desc">Database & Backend</p>
+            </div>
+        </div>
+
+        <div class="tool-card">
+            <div class="tool-icon-box">
+                <img src="{{ asset('images/github.png') }}"
+                     alt="GitHub Logo"
+                     class="tool-image">
+            </div>
+            <div class="tool-text">
+                <p class="tool-name">GitHub</p>
+                <p class="tool-desc">Version Control</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
     </section>
+
 
     <!-- PROJECT  -->
     <section class="project" id="project">
@@ -251,38 +402,84 @@
             </div>
         </div>
     </section>
-    <section class="services" id="services">
-        <p>SERVICES</p>
-        <h1>Our Features & Services</h1>
-        <hr>
-        <div class="services-container">
 
-            <div class="service-card">
-                <img src="images/web.svg" alt="Web Development">
-                <h3>Web Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
-            </div>
+  <!-- ===== SERVICES SECTION ===== -->
+<section class="services" id="services">
 
-            <div class="service-card">
-                <img src="images/app.svg" alt="App Development">
-                <h3>App Development</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
-            </div>
+    <p>SERVICES</p>
+    <h1>Services I Offer</h1>
+    <hr>
 
-            <div class="service-card">
-                <img src="images/dm.svg" alt="Digital Marketing">
-                <h3>Digital Marketing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
-            </div>
+    <div class="services-container">
 
-            <div class="service-card">
-                <img src="images/seo.svg" alt="Email Marketing">
-                <h3>Email Marketing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut eligendi soluta est veniam sequi nemo.</p>
-            </div>
+        <!-- Web Development -->
+        <div class="service-card">
+            <img
+                src="{{ asset('images/web.svg') }}"
+                alt="Web Development"
+                loading="lazy"
+            >
 
+            <h3>Web Development</h3>
+
+            <p>
+                I build modern, responsive, and user-friendly websites
+                using current web technologies.
+            </p>
         </div>
-    </section>
+
+        <!-- App Development -->
+        <div class="service-card">
+            <img
+                src="{{ asset('images/app.svg') }}"
+                alt="App Development"
+                loading="lazy"
+            >
+
+            <h3>App Development</h3>
+
+            <p>
+                I develop functional mobile applications using Flutter
+                and Firebase based on user needs.
+            </p>
+        </div>
+
+        <!-- Digital Marketing -->
+        <div class="service-card">
+            <img
+                src="{{ asset('images/dm.svg') }}"
+                alt="Digital Marketing"
+                loading="lazy"
+            >
+
+            <h3>Digital Marketing</h3>
+
+            <p>
+                I help improve digital presence through effective content
+                strategies and audience-focused campaigns.
+            </p>
+        </div>
+
+        <!-- Email Marketing -->
+        <div class="service-card">
+            <img
+                src="{{ asset('images/seo.svg') }}"
+                alt="Email Marketing"
+                loading="lazy"
+            >
+
+            <h3>Email Marketing</h3>
+
+            <p>
+                I create clear and engaging email campaigns designed to
+                connect businesses with their audiences.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- contact -->
     <section class="contact" id="contact">
         <p>CONTACT</p>
         <h1>Get in Touch with Us</h1>
@@ -333,6 +530,8 @@
             </div>
         </div>
     </section>
+
+    <!-- footer -->
     <footer class="footer">
         <div class="footer-container">
             <h2 class="footer-logo">Biliyuuu</h2>
